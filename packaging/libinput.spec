@@ -1,7 +1,7 @@
 %define udev_dir %{_prefix}/lib/udev
 
 Name:           libinput
-Version:        0.11.0
+Version:        0.12.0
 Release:        0
 License:        MIT
 Summary:        Input devices for display servers and other applications
