@@ -1,7 +1,7 @@
 %define udev_dir %{_prefix}/lib/udev
 
 Name:           libinput
-Version:        0.12.0
+Version:        0.18.0
 Release:        0
 License:        MIT
 Summary:        Input devices for display servers and other applications
@@ -62,11 +62,15 @@ functionality that users expect.
 %files
 %defattr(-,root,root)
 %{_libdir}/*.so.*
+%{_bindir}/*%{name}*
 %{udev_dir}/%{name}*
 %{udev_dir}/rules.d/*%{name}*
+%{udev_dir}/hwdb.d/*%{name}*
+
 
 %files devel
 %defattr(-,root,root,-)
 %{_includedir}/*
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/*
+%{_mandir}/*/*
